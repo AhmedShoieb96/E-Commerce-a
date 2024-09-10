@@ -1,0 +1,22 @@
+<div class="box" *ngIf="!loading">
+  <div class="row ">
+    <div class="col-md-5 col-sm-12" *ngIf="productDetails.images && productDetails.images.length > 0">
+      <img class="image" src="{{productDetails.images[0]}}" alt="sds">
+    </div>
+    <div class="col-md-7 col-sm-12">
+      <div class="info">
+        <ul class="list-untyled">
+            <li><strong>Title : </strong> {{productDetails.title}}</li>
+            <li><strong>Category : </strong>{{productDetails.category}}</li>
+            <li><strong>Description : </strong>{{productDetails.description}}</li>
+            <li><strong>Rate : </strong>{{productDetails.rating}}</li>
+            <li><strong>Stock : </strong>{{productDetails.stock}}</li>
+            <li><strong>Price : </strong>{{productDetails.price}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="m-5">
+  <app-spinner  *ngIf="loading"></app-spinner>
+</div>

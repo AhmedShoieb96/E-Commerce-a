@@ -1,0 +1,95 @@
+.cartHeader{
+  margin-bottom: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.cartHeader .welcoming h1{
+  color: #981414;
+  font-weight: 600;
+
+}
+.cartHeader .welcoming p {
+  color: black;
+  font-weight: 600;
+
+}
+.cartHeader .welcoming p>span{
+  color: #981414;
+  font-size: larger;
+}
+.cartHeader .delete-all{
+  border-radius: 20px;
+  background-color:#981414 ;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+/* header end */
+.cart-body table thead{
+  border-bottom: 1px solid black;
+  font-size: 15px;
+  font-weight: 800;
+
+}
+.cart-body table tbody>tr>td>div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart-body table tbody>tr>td>div>button{
+
+border: none;
+background-color: white;
+font-size: 40px;
+
+
+}
+.cart-body table tbody>tr>td>div>input{
+  width: 50px;
+  border-radius: 50%;
+  text-align: center;
+
+}
+
+
+
+.cart-body table .del{
+font-weight: bold;
+font-size: 35px;
+cursor: pointer;
+}
+.cart-body table .del button{
+border: none;
+border-radius: 50%;
+background-color: #981414;
+color: white;
+}
+.cart-body table{
+  margin-bottom: 30PX;
+  border-bottom: 1px solid black;
+}
+
+tfoot{
+  border-top: 1px solid black;
+}
+tfoot>tr>td>button{
+  border: none;
+  background-color: rgb(4, 101, 49);
+  border-radius: 20px;
+  margin: 10px 0;
+  color: white;
+
+}
+
+.alert{
+  background-color: rgb(0, 128, 60);
+  color: white;
+
+}
+img{
+  width: 100px;
+  height: auto;
+}

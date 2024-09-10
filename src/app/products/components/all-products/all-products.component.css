@@ -1,0 +1,21 @@
+.product:hover {
+  transform: scale(1.1);
+
+}
+
+.row {
+  display: flex;
+  justify-content:space-between;
+
+
+}
+
+.row .product {
+  border: 1px solid grey;
+  padding: 0;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 25px;
+  width: 230px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px gray;
+}

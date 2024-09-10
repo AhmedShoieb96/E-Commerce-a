@@ -1,0 +1,32 @@
+nav {
+  background: linear-gradient(to right, #981414, #440606);
+  color: #fff;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.content ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+
+}
+.content ul li{
+ font-size: 20px;
+ cursor: pointer;
+  }
+
+
+.content .logo img{
+  width: 70px;
+  height:auto ;
+  cursor: pointer;
+}

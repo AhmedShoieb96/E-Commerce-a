@@ -1,0 +1,86 @@
+<div class="container">
+  <!-- sart cart header -->
+
+  <div class="cartHeader w-100">
+    <div class="welcoming">
+      <h1>Your Shopping Cart</h1>
+      <p>
+        You have <span>{{ TotalcartProducts }}</span> items
+      </p>
+    </div>
+    <div class="delete-all">
+      <span class="deleteAllCart" role="button" (click)="deleteAll()"
+        >Delete all items</span
+      >
+    </div>
+  </div>
+  <!-- end cart header -->
+
+  <!-- sart cart body -->
+  <div class="cart-body w-100">
+    <table class="w-100 text-center">
+      <thead>
+        <tr>
+          <td></td>
+          <td>Name</td>
+          <td>Price</td>
+          <td>Quantity</td>
+          <td>Total Price</td>
+          <td></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of cart; let index = index">
+          <td><img src="{{ item.item.images[0] }}" alt="img" /></td>
+          <td>{{ item.item.title }}</td>
+          <td>{{ item.item.price }} $</td>
+          <td>
+            <div>
+              <button (click)="addNum(index)">+</button>
+              <input
+                type="text"
+                min="1"
+                (keyup)="detectChange()"
+                [(ngModel)]="item.itemNum"
+              />
+              <button (click)="minNum(index)">-</button>
+            </div>
+          </td>
+          <td>{{ item.item.price * item.itemNum }} $</td>
+          <td class="del"><button (click)="deleteProduct(index)">X</button></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Total Price :</td>
+          <td>{{ totalPrice }} $</td>
+          <td><button (click)="sendDataToBackEnd()">Order now !</button></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <!-- end cart body -->
+
+  <!-- start cart footer -->
+  <div role="alert" class="alert" *ngIf="active">
+    Your order was sent successfully
+  </div>
+  <!-- <div class="cart-footer">
+    <div class="Info">
+      <div class="delivery">
+        <h3>Delifery info</h3>
+        <p>xjkakjdascma adhaslhlkasnldkhaod nd jklasdiahpd malidlasknc</p>
+      </div>
+      <div>
+        <h3>Payment info</h3>
+        <p>we accept al of the below..</p>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- end cart footer -->
+</div>

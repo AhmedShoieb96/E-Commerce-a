@@ -1,0 +1,14 @@
+<div class="mt-5">
+  <div class="category">
+
+    <app-select [data]="categories" [title]="'Category'" (selectedValue)=" filterCategory($event)"></app-select>
+  </div>
+  <div class="row mt-5" *ngIf="!loading" >
+    <div class="col-sm-12 col-md-3 product container" *ngFor="let item of products" >
+    <app-product [data]="item" (productSelected)="addToCart($event)"></app-product>
+    </div>
+  </div>
+</div>
+<div>
+  <app-spinner *ngIf="loading"></app-spinner>
+</div>
